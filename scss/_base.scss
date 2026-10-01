@@ -1,0 +1,188 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    @include flex-column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    background: $background;
+    font-family: 'Inter', sans-serif;
+}
+main{
+    width: 100%;
+    height: calc(100vh - 114px);
+    @include flex-column;
+    gap: 10px;
+}
+.search{
+    @include flex-between;
+    gap: 10px;
+    height: 52px;
+    width: 100%;
+    max-width: 600px;
+    min-width: 275px;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid $gray-light;
+    border-radius: 20px;
+    background: $background-cards;
+    &__input{
+        border: none;
+        width: 85%;
+
+        height: 48px;
+        outline: none;
+        font-size: 1.5rem;
+    }
+    &__btn{
+        width: 15%;
+        max-width: 83px;
+        height: 37px;
+        border: none;
+        border-radius: 12px;
+        background: $blue;
+        color: white;
+        font-size: 1.4rem;
+    }
+}
+.weather{
+    width: 100%;
+    max-width: 480px;
+    min-width: 270px;
+    min-height: 472px;
+    padding: 32px;
+    @include card;
+    @include flex-column;
+    &__icon{
+        width: 20px;
+        height: 20px;
+    }
+    &__icon--big{
+        width: 96px;
+        height: 96px;
+    }
+    &__city{
+        font-size: 3.6rem;
+        font-weight: 600;
+        color: $text-dark;
+        margin: 5px 0px;
+    }
+    &__temp{
+        font-size: 6.4rem;
+        font-weight: 800;
+        color: $text-dark;
+        margin: 0;
+    }
+    &__desc{
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $text-dark;
+        margin: 10px 0px;
+    }
+    &__feels{
+        font-size: 1.4rem;
+        font-weight: 200;
+        color: $text-light;
+        margin: 0;
+    }
+    &__line{
+        border: none;
+        border-bottom: 1px solid $gray-light; 
+        background: $gray-light;
+        width: 100%;
+        height: 0px;
+        margin: 20px 0px;
+    }
+    &__info{
+        width: 100%;
+        height: auto;
+        @include flex-between;
+        box-sizing: border-box;
+        padding: 10px 10px;
+    }
+    &__item{
+        @include flex-column;
+    }
+    &__value{
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $text-dark;
+    }
+    &__label{
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $text-light;
+    }
+}
+.forecast{
+    width: 100%;
+    max-width: 680px;
+    min-width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    &__title{
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $text-light;
+        text-align: left;
+    }
+    &__list{
+        width: 100%;
+        gap: 10px;
+        @include flex-between;
+        list-style: none;
+        padding: 0px;
+    }
+    &__item{
+        margin: 0px;
+        flex: 1;
+    }
+    &__card{
+        width: 100%;
+        height: 114px;
+        @include card;
+        @include flex-column;
+    }
+    &__day{
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $text-light;
+    }
+    
+    &__temps{
+        @include flex-between;
+        gap: 10px;
+    }
+    &__temp{
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $text-dark;
+    }
+    &__temp--night{
+        font-size: 1.2rem;
+        font-weight: 200;
+        color: $text-light;
+    }
+}
+@media(max-width: 300px){
+    .search__input{
+        width: 70%;
+    }
+    .search__btn{
+        width: 30%;
+    }
+    .forecast__icon{
+        display: none;
+    }
+    .forecast__temp{
+        margin: 0px;
+    }
+    .forecast__temps{
+        @include flex-column;
+       
+    }
+
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Weather</h1>
+        <button class="header__btn-theme">🌙</button>
+    </header>
+    <main>
+        <form class="search">
+            <input type="text" class="search__input" placeholder="Введите город">
+            <button class="search__btn">Найти</button>
+        </form>
+        <article class="weather">
+            <img src="images/sun.svg" alt="" class="weather__icon weather__icon--big"> 
+            <h2 class="weather__city">Город</h2>
+            <p class="weather__temp">+ 14</p>
+            <p class="weather__desc">Облачно с осадками</p>
+            <p class="weather__feels">Ощущается как</p>
+            <hr class="weather__line">
+            <div class="weather__info">
+                <div class="weather__item">
+                    <img src="" alt="" class="weather__icon">
+                    <div class="weather__value">72</div>
+                    <div class="weather__label">Влажность</div>
+                </div>
+                <div class="weather__item">
+                    <img src="" alt="" class="weather__icon">
+                    <div class="weather__value">7м/с</div>
+                    <div class="weather__label">Ветер</div>
+                </div>
+                <div class="weather__item">
+                    <img src="" alt="" class="weather__icon">
+                    <div class="weather__value">748 мм</div>
+                    <div class="weather__label">Давление</div>
+                </div>
+            </div>
+        </article>
+        <section class="forecast">
+            <h2 class="forecast__title">Прогноз на 5 дней</h2>
+            <ul class="forecast__list">
+                <li class="forecast__item">
+                    <article class="forecast__card">
+                        <h3 class="forecast__day">ПН</h3>
+                        <img src="" alt="" class="forecast__icon">
+                        <div class="forecast__temps">
+                            <p class="forecast__temp">+ 8</p>
+                            <p class="forecast__temp forecast__temp--night">+ 10</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="forecast__item">
+                    <article class="forecast__card">
+                        <h3 class="forecast__day">ВТ</h3>
+                        <img src="" alt="" class="forecast__icon">
+                        <div class="forecast__temps">
+                            <p class="forecast__temp">+ 8</p>
+                            <p class="forecast__temp forecast__temp--night">+ 10</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="forecast__item">
+                    <article class="forecast__card">
+                        <h3 class="forecast__day">СР</h3>
+                        <img src="" alt="" class="forecast__icon">
+                        <div class="forecast__temps">
+                            <p class="forecast__temp">+ 8</p>
+                            <p class="forecast__temp forecast__temp--night">+ 10</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="forecast__item">
+                    <article class="forecast__card">
+                        <h3 class="forecast__day">ЧТ</h3>
+                        <img src="" alt="" class="forecast__icon">
+                        <div class="forecast__temps">
+                            <p class="forecast__temp">+ 8</p>
+                            <p class="forecast__temp forecast__temp--night">+ 10</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="forecast__item">
+                    <article class="forecast__card">
+                        <h3 class="forecast__day">ПТ</h3>
+                        <img src="" alt="" class="forecast__icon">
+                        <div class="forecast__temps">
+                            <p class="forecast__temp">+ 8</p>
+                            <p class="forecast__temp forecast__temp--night">+ 10</p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 Weather</p>
+    </footer>
+</body>
+</html>

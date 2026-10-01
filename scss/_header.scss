@@ -1,0 +1,23 @@
+@import 'variables';
+@import 'mixin';
+
+.header{
+    width: 100%;
+    height: 57px;
+    box-sizing: border-box;
+    padding: 0px 37px;
+    @include flex-between;
+    border-bottom: 1px solid $gray-light;
+    &__title{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    &__btn-theme{
+        width: 32px;
+        height: 32px;
+        background: $gray-light;
+        border: none;
+        border-radius: 50%;
+
+    }
+}
