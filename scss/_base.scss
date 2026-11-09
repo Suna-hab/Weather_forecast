@@ -1,21 +1,24 @@
-html{
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     @include flex-column;
     gap: 10px;
     padding: 0;
     margin: 0;
-    background: $background;
+    background: var(--bg);
     font-family: 'Inter', sans-serif;
 }
-main{
+
+main {
     width: 100%;
     height: calc(100vh - 114px);
     @include flex-column;
     gap: 10px;
 }
-.search{
+
+.search {
     @include flex-between;
     gap: 10px;
     height: 52px;
@@ -24,29 +27,33 @@ main{
     min-width: 275px;
     box-sizing: border-box;
     padding: 15px;
-    border: 1px solid $gray-light;
+    border: 1px solid var(--border);
     border-radius: 20px;
-    background: $background-cards;
-    &__input{
+    background: var(--card);
+    
+    &__input {
         border: none;
         width: 85%;
-
         height: 48px;
         outline: none;
         font-size: 1.5rem;
+        background: transparent;
+        color: var(--text);
     }
-    &__btn{
+    
+    &__btn {
         width: 15%;
         max-width: 83px;
         height: 37px;
         border: none;
         border-radius: 12px;
-        background: $blue;
+        background: var(--accent);
         color: white;
         font-size: 1.4rem;
     }
 }
-.weather{
+
+.weather {
     width: 100%;
     max-width: 480px;
     min-width: 270px;
@@ -54,68 +61,71 @@ main{
     padding: 32px;
     @include card;
     @include flex-column;
-    &__icon{
-        width: 20px;
-        height: 20px;
-    }
-    &__icon--big{
-        width: 96px;
-        height: 96px;
-    }
-    &__city{
+    
+    &__icon { width: 20px; height: 20px; }
+    &__icon--big { width: 96px; height: 96px; }
+    
+    &__city {
         font-size: 3.6rem;
         font-weight: 600;
-        color: $text-dark;
+        color: var(--text);
         margin: 5px 0px;
     }
-    &__temp{
+    
+    &__temp {
         font-size: 6.4rem;
         font-weight: 800;
-        color: $text-dark;
+        color: var(--text);
         margin: 0;
     }
-    &__desc{
+    
+    &__desc {
         font-size: 1.6rem;
         font-weight: 400;
-        color: $text-dark;
+        color: var(--text);
         margin: 10px 0px;
     }
-    &__feels{
+    
+    &__feels {
         font-size: 1.4rem;
         font-weight: 200;
-        color: $text-light;
+        color: var(--text-secondary);
         margin: 0;
     }
-    &__line{
+    
+    &__line {
         border: none;
-        border-bottom: 1px solid $gray-light; 
-        background: $gray-light;
+        border-bottom: 1px solid var(--border);
+        background: var(--bg);
         width: 100%;
         height: 0px;
         margin: 20px 0px;
     }
-    &__info{
+    
+    &__info {
         width: 100%;
         height: auto;
         @include flex-between;
         box-sizing: border-box;
         padding: 10px 10px;
     }
-    &__item{
-        @include flex-column;
-    }
-    &__value{
+    
+    &__item { @include flex-column; }
+    
+    &__value {
         font-size: 1.5rem;
         font-weight: 500;
-        color: $text-dark;
+        color: var(--text);
     }
-    &__label{
+    
+    &__label {
         font-size: 1.1rem;
         font-weight: 400;
-        color: $text-light;
+        color: var(--text-secondary);
     }
 }
-.forecast{
+
+.forecast {
     width: 100%;
     max-width: 680px;
     min-width: 270px;
@@ -123,66 +133,58 @@ main{
     flex-direction: column;
     justify-content: center;
     
-    &__title{
+    &__title {
         font-size: 1.4rem;
         font-weight: 500;
-        color: $text-light;
+        color: var(--text-secondary);
         text-align: left;
     }
-    &__list{
+    
+    &__list {
         width: 100%;
         gap: 10px;
         @include flex-between;
         list-style: none;
         padding: 0px;
     }
-    &__item{
-        margin: 0px;
-        flex: 1;
-    }
-    &__card{
+    
+    &__item { margin: 0px; flex: 1; }
+    
+    &__card {
         width: 100%;
         height: 114px;
         @include card;
         @include flex-column;
     }
-    &__day{
+    
+    &__day {
         font-size: 1.4rem;
         font-weight: 500;
-        color: $text-light;
+        color: var(--text-secondary);
     }
     
-    &__temps{
+    &__temps {
         @include flex-between;
         gap: 10px;
     }
-    &__temp{
+    
+    &__temp {
         font-size: 1.4rem;
         font-weight: 500;
-        color: $text-dark;
+        color: var(--text);
     }
-    &__temp--night{
+    
+    &__temp--night {
         font-size: 1.2rem;
         font-weight: 200;
-        color: $text-light;
+        color: var(--text-secondary);
     }
 }
-@media(max-width: 300px){
-    .search__input{
-        width: 70%;
-    }
-    .search__btn{
-        width: 30%;
-    }
-    .forecast__icon{
-        display: none;
-    }
-    .forecast__temp{
-        margin: 0px;
-    }
-    .forecast__temps{
-        @include flex-column;
-       
-    }
 
+@media (max-width: 300px) {
+    .search__input { width: 70%; }
+    .search__btn { width: 30%; }
+    .forecast__icon { display: none; }
+    .forecast__temp { margin: 0px; }
+    .forecast__temps { @include flex-column; }
 }

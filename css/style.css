@@ -1,3 +1,42 @@
+:root {
+  --bg: #e6eaef;
+  --card: #FFFFFF;
+  --text: #1A1A1A;
+  --text-secondary: #6B7280;
+  --border: #dadfe9;
+  --accent: #4A90E2;
+  --sun: #FBBF24;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1A1A1A;
+    --card: #242424;
+    --text: #E5E5E5;
+    --text-secondary: #9CA3AF;
+    --border: #3A3A3A;
+    --accent: #22D3EE;
+    --sun: #FBBF24;
+  }
+}
+[data-theme=light] {
+  --bg: #e6eaef;
+  --card: #FFFFFF;
+  --text: #1A1A1A;
+  --text-secondary: #6B7280;
+  --border: #dadfe9;
+  --accent: #4A90E2;
+}
+
+[data-theme=dark] {
+  --bg: #1A1A1A;
+  --card: #242424;
+  --text: #E5E5E5;
+  --text-secondary: #9CA3AF;
+  --border: #3A3A3A;
+  --accent: #22D3EE;
+}
+
 .header {
   width: 100%;
   height: 57px;
@@ -6,16 +45,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ccd2de;
+  border-bottom: 1px solid var(--border);
 }
 .header__title {
   font-size: 2rem;
   font-weight: 600;
+  color: var(--text);
 }
 .header__btn-theme {
   width: 32px;
   height: 32px;
-  background: #ccd2de;
+  background: var(--card);
   border: none;
   border-radius: 50%;
 }
@@ -31,7 +71,7 @@ body {
   gap: 10px;
   padding: 0;
   margin: 0;
-  background: #e7eaee;
+  background: var(--bg);
   font-family: "Inter", sans-serif;
 }
 
@@ -55,9 +95,9 @@ main {
   min-width: 275px;
   box-sizing: border-box;
   padding: 15px;
-  border: 1px solid #ccd2de;
+  border: 1px solid var(--border);
   border-radius: 20px;
-  background: #FFFFFF;
+  background: var(--card);
 }
 .search__input {
   border: none;
@@ -65,6 +105,8 @@ main {
   height: 48px;
   outline: none;
   font-size: 1.5rem;
+  background: transparent;
+  color: var(--text);
 }
 .search__btn {
   width: 15%;
@@ -72,7 +114,7 @@ main {
   height: 37px;
   border: none;
   border-radius: 12px;
-  background: #4A90E2;
+  background: var(--accent);
   color: white;
   font-size: 1.4rem;
 }
@@ -83,10 +125,10 @@ main {
   min-width: 270px;
   min-height: 472px;
   padding: 32px;
-  background: #FFFFFF;
+  background: var(--card);
   border-radius: 20px;
   box-sizing: border-box;
-  border: 1px solid #ccd2de;
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,31 +144,31 @@ main {
 .weather__city {
   font-size: 3.6rem;
   font-weight: 600;
-  color: #1A1A1A;
+  color: var(--text);
   margin: 5px 0px;
 }
 .weather__temp {
   font-size: 6.4rem;
   font-weight: 800;
-  color: #1A1A1A;
+  color: var(--text);
   margin: 0;
 }
 .weather__desc {
   font-size: 1.6rem;
   font-weight: 400;
-  color: #1A1A1A;
+  color: var(--text);
   margin: 10px 0px;
 }
 .weather__feels {
   font-size: 1.4rem;
   font-weight: 200;
-  color: #6B7280;
+  color: var(--text-secondary);
   margin: 0;
 }
 .weather__line {
   border: none;
-  border-bottom: 1px solid #ccd2de;
-  background: #ccd2de;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
   width: 100%;
   height: 0px;
   margin: 20px 0px;
@@ -148,12 +190,12 @@ main {
 .weather__value {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #1A1A1A;
+  color: var(--text);
 }
 .weather__label {
   font-size: 1.1rem;
   font-weight: 400;
-  color: #6B7280;
+  color: var(--text-secondary);
 }
 
 .forecast {
@@ -167,7 +209,7 @@ main {
 .forecast__title {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #6B7280;
+  color: var(--text-secondary);
   text-align: left;
 }
 .forecast__list {
@@ -186,10 +228,10 @@ main {
 .forecast__card {
   width: 100%;
   height: 114px;
-  background: #FFFFFF;
+  background: var(--card);
   border-radius: 20px;
   box-sizing: border-box;
-  border: 1px solid #ccd2de;
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,7 +239,7 @@ main {
 .forecast__day {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #6B7280;
+  color: var(--text-secondary);
 }
 .forecast__temps {
   display: flex;
@@ -208,12 +250,12 @@ main {
 .forecast__temp {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #1A1A1A;
+  color: var(--text);
 }
 .forecast__temp--night {
   font-size: 1.2rem;
   font-weight: 200;
-  color: #6B7280;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 300px) {
@@ -239,14 +281,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #ccd2de;
+  border-top: 1px solid var(--border);
   width: 100%;
   height: 57px;
 }
 .footer__text {
   font-size: 1.3rem;
   font-weight: 200;
-  color: #6B7280;
+  color: var(--text-secondary);
 }
 
 /*# sourceMappingURL=style.css.map */

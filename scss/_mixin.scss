@@ -1,22 +1,26 @@
-@import 'variables';
-@mixin flex-center{
+
+
+@mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-@mixin flex-between{
+
+@mixin flex-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-@mixin flex-column{
+
+@mixin flex-column {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-@mixin card{
-    background: $background-cards;
+
+@mixin card {
+    background: var(--card);
     border-radius: 20px;
     box-sizing: border-box;
-    border: 1px solid $gray-light;
+    border: 1px solid var(--border);
 }
